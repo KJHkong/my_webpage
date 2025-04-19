@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>孔嘉浩的个人网页</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部区域 (Header) -->
+        <header>
+            <nav class="nav-bar">
+                <div class="logo">孔嘉浩</div>
+                <ul class="nav-links">
+                    <li><a href="#about">我的常用</a></li>
+                    <li><a href="#carousel">关于我</a></li>
+                    <li><a href="#contact">联系我</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+            <div class="header-content">
+                <h1>孔嘉浩的个人网页</h1>
+                <p>数学与应用数学 × 人工智能爱好者</p>
+            </div>
+        </header>
+
+        <!-- 照片轮播区 -->
+        <section id="carousel" class="carousel-section">
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="carousel-slide active">
+                        <a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="imgs/anthropic.jpg" alt="Anthropic">
+                            <div class="slide-caption">Anthropic - 致力于开发安全的AI系统</div>
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="https://www.deepseek.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="imgs/deepseek.jpg" alt="DeepSeek">
+                            <div class="slide-caption">DeepSeek - AI领域的创新探索者</div>
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="https://deepmind.google/" target="_blank" rel="noopener noreferrer">
+                            <img src="imgs/google deepmind.jpg" alt="Google DeepMind">
+                            <div class="slide-caption">Google DeepMind - 人工智能研究的先驱</div>
+                        </a>
+                    </div>
+                    <div class="carousel-slide">
+                        <a href="https://openai.com/" target="_blank" rel="noopener noreferrer">
+                            <img src="imgs/openai.jpg" alt="OpenAI">
+                            <div class="slide-caption">OpenAI - 安全、有益的通用人工智能</div>
+                        </a>
+                    </div>
+                </div>
+                
+                <button class="carousel-button prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-button next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-nav">
+                    <button class="carousel-indicator active" data-slide="0"></button>
+                    <button class="carousel-indicator" data-slide="1"></button>
+                    <button class="carousel-indicator" data-slide="2"></button>
+                    <button class="carousel-indicator" data-slide="3"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我区域 -->
+        <section id="about" class="about-section">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <p>我是孔嘉浩，一名普通的数学与应用数学专业本科二年级学生。在学习数学的过程中，我对人工智能这个领域产生了浓厚的兴趣，正在自学一些基础知识，希望能够理解AI背后的数学原理。</p>
+                <p>目前还在学习阶段，对深度学习、机器学习等方向有所了解，但仍有很长的路要走。希望能在这个过程中不断进步，也期待与有相同兴趣的同学交流学习经验。</p>
+            </div>
+        </section>
+
+        <!-- 社交媒体链接区 -->
+        <section id="contact" class="social-section">
+            <h2>联系我</h2>
+            <div class="social-icons">
+                <a href="imgs/wechat code.jpg" class="social-icon" target="_blank">
+                    <i class="fab fa-weixin"></i>
+                    <span>微信</span>
+                </a>
+                <a href="imgs/QQcode.jpg" class="social-icon" target="_blank">
+                    <i class="fab fa-qq"></i>
+                    <span>QQ</span>
+                </a>
+                <a href="mailto:your.email@example.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                    <span>邮箱</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 孔嘉浩. 保留所有权利。</p>
+                <p>数学&AI</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 聊天窗口（固定在页面底部） -->
+    <div id="chat-container" class="chat-container fixed-bottom">
+        <div class="chat-header">
+            <div class="chat-title">与我的AI助手对话</div>
+            <div class="chat-actions">
+                <button id="pause-chat" class="pause-button" title="暂停回答">
+                    <i class="fas fa-pause"></i>
+                </button>
+                <button id="reset-chat" class="reset-button" title="重置对话">
+                    <i class="fas fa-redo-alt"></i>
+                </button>
+                <button id="toggle-chat" class="toggle-button" title="最小化/最大化">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="chat-messages" class="chat-messages">
+            <div class="message ai-message">
+                <div class="message-content">你好！我是孔嘉浩的AI助手。我可以回答数学和人工智能领域的问题，也可以聊聊其他话题。有什么我能帮到你的吗？</div>
+                <div class="message-time">刚刚</div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <textarea id="user-input" class="chat-input" placeholder="在这里输入您的问题..." rows="1"></textarea>
+            <button id="send-button" class="send-button" disabled>
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- 背景效果 -->
+    <div class="background-animation">
+        <canvas id="stars"></canvas>
+    </div>
+
+    <!-- 图片查看器模态框 -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
